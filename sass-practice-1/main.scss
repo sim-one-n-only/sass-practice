@@ -1,0 +1,83 @@
+@import "profile";
+
+$bg-color: #2c3e50;
+$hover-color: #16a085;
+$text-color: #ffffff;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+nav {
+  ul {
+    background: $bg-color;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: $text-color;
+    display: inline-block;
+    padding:10px 16px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background: $hover-color;
+  }
+}
+
+p {
+  font-size: 24px;
+}
+
+.panel {
+  border: 3px solid dodgerblue;
+  background: lightgray;
+  margin: 10px;
+}
+
+.little-panel {
+  @extend .panel;
+  @include border-radius(5px);
+  font-size: 12px;
+  padding: 5px;
+}
+
+.big-panel {
+  @extend .panel;
+  @include border-radius(20px);
+  font-size: 32px;
+  padding: 20px;
+}
+
+$button-background: #16E185;
+$button-color: #FFFFFF;
+$button-padding: 5px;
+
+.button {
+  background: $button-background;
+  border-radius: 8px;
+  color: $button-color;
+  display: inline-block;
+  padding: $button-padding;
+  text-decoration: none;
+}
+
+.jumbo-button {
+  @extend .button;
+  padding: $button-padding + 30;
+}
+
+.light-button {
+  @extend .button;
+  background: $button-background * 1.5;
+}
+
