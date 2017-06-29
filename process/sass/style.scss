@@ -1,4 +1,16 @@
- html {
+$offwhite: #EEE8D6;
+$darkblue: #022933;
+$yellow: #FFBA00;
+$blue: #0076A3;
+$red: FF0000;
+
+
+$color-main: $darkblue;
+$color-backgrounds: $offwhite;
+$color-item-border: $red;
+
+
+html {
   font-size: 62.5%;
 }
 
@@ -7,11 +19,29 @@ body {
   padding: 0;
   font-size: 1.8rem;
   font-family: 'Helvetica', sans-serif;
-  color: #022933;
-  background-color: #EEE8D6;
+  color: $color-main;
+  background-color: $color-backgrounds;
 }
 
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.media {
+  margin: 0;
+  padding: 0;
+    list-style: none;
+
+    .item {
+      margin-bottom: 20px;
+      border-top: 1px dotted $color-item-border;
+      padding-top: 10px;
+    }
+
+    //.head {
+    //  margin: 0;
+    //  padding: 0;
+    //  color: $color
+    //}
 }
